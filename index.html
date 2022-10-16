@@ -4,9 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./dist/css/style.min.css" />
+
     <title>Morse Code Translator</title>
   </head>
   <body>
-    <script type="module" src="./js/index.js"></script>
+    <div class="container">
+      <div>
+        <label for="text">Input: </label>
+        <textarea
+          name="text"
+          id="text"
+          cols="80"
+          rows="10"
+          placeholder="English text or morse code..."
+        ></textarea>
+      </div>
+      <div>
+        <label for="output">Output: </label>
+        <textarea name="output" id="output" cols="80" rows="10"></textarea>
+      </div>
+      <div>
+        <p>
+          You can type Morse code into the top box using "." for a dot and "-"
+          for a dash. Letters are separated by a space and words by "/". The
+          text translation will appear in the bottom box. If a letter cannot be
+          translated a "#" will appear in the output.
+        </p>
+      </div>
+    </div>
+    <script type="module" src="./js/index.mjs"></script>
   </body>
 </html>
