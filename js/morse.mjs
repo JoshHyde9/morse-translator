@@ -65,6 +65,10 @@ textToMorse.forEach((value, key) => {
  * @returns {string} morse code
  */
 export const encodeToMorse = (text) => {
+  if (typeof text !== "string") {
+    throw new Error("Input is not a string");
+  }
+
   return text
     .split("")
     .map((character) => {
@@ -80,6 +84,10 @@ export const encodeToMorse = (text) => {
  * @returns {string} alphanumeric characters
  */
 export const decodeMorse = (text) => {
+  if (typeof text !== "string") {
+    throw new Error("Input is not a string");
+  }
+
   return text
     .split("/")
     .map((word) => {
