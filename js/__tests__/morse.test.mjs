@@ -10,6 +10,18 @@ describe("Encode English test", () => {
       checkType({ name: "Josh" });
     }).toThrow("Input is not a string");
   });
+
+  it('should encode "Hello, World!" correctly', () => {
+    expect(encodeToMorse("Hello, World!")).toBe(
+      ".... . .-.. .-.. --- --..-- / .-- --- .-. .-.. -.. -.-.--"
+    );
+  });
+
+  it('should encode "Hello [] World!" correctly', () => {
+    expect(encodeToMorse("Hello [] World!")).toBe(
+      ".... . .-.. .-.. --- / # # / .-- --- .-. .-.. -.. -.-.--"
+    );
+  });
 });
 
 const checkType = (input) => {
