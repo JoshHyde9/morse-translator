@@ -2,13 +2,11 @@ import { decodeMorse, encodeToMorse } from "../morse.mjs";
 
 describe("Encode English test", () => {
   it("should error passing in anything but a string", () => {
-    expect(() => {
-      checkType([]);
-    }).toThrow("Input is not a string");
+    expect(() => decodeMorse([])).toThrowError("Input is not a string");
 
-    expect(() => {
-      checkType({ name: "Josh" });
-    }).toThrow("Input is not a string");
+    expect(() => decodeMorse({ name: "Josh" })).toThrowError(
+      "Input is not a string"
+    );
   });
 
   it('should encode "Hello, World!" correctly', () => {
@@ -24,10 +22,12 @@ describe("Encode English test", () => {
   });
 });
 
-const checkType = (input) => {
-  if (typeof input !== "string") {
-    throw new Error("Input is not a string");
-  }
+describe("Decodes Morse Code correctly", () => {
+  it("should error passing in anything but a string", () => {
+    expect(() => decodeMorse([])).toThrowError("Input is not a string");
 
-  return input;
-};
+    expect(() => decodeMorse({ name: "Josh" })).toThrowError(
+      "Input is not a string"
+    );
+  });
+});
