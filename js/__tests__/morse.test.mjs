@@ -30,4 +30,10 @@ describe("Decodes Morse Code correctly", () => {
       "Input is not a string"
     );
   });
+
+  it("should decode Morse Code to English correctly", () => {
+    expect(
+      decodeMorse(".... . .-.. .-.. --- --..-- / .-- --- .-. .-.. -.. -.-.--")
+    ).toBe("HELLO, WORLD!");
+  });
 });
