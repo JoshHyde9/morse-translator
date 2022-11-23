@@ -74,3 +74,12 @@ label {
 .btn:hover {
   background-color: #f432f4;
 }
+
+#message {
+  margin: 0.5rem 0;
+  display: none;
+}
+
+.visible {
+  display: block !important;
+}

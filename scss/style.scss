@@ -81,3 +81,12 @@ label {
     background-color: lighten($color: #e70ce7, $amount: 10);
   }
 }
+
+#message {
+  margin: 0.5rem 0;
+  display: none;
+}
+
+.visible {
+  display: block !important;
+}

@@ -14,6 +14,17 @@ input.addEventListener("keyup", () => {
   } else {
     output.value = encodeToMorse(message);
   }
+
+  const info = document.getElementById("message");
+
+  if (output.value.includes("#")) {
+    info.innerText =
+      "Input contains unsupported characters, maybe try something else.";
+
+    info.classList.add("visible");
+  } else {
+    info.classList.remove("visible");
+  }
 });
 
 // Copy output box to clipboard
