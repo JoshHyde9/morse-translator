@@ -51,6 +51,7 @@ label {
       border-radius: 10px;
       resize: none;
       font-size: 1rem;
+      color: black;
 
       &:focus {
         outline: none;
@@ -61,5 +62,22 @@ label {
       margin-top: 1rem;
       text-align: center;
     }
+  }
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: #e70ce7;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color ease-in-out 150ms;
+
+  &:hover {
+    background-color: lighten($color: #e70ce7, $amount: 10);
   }
 }

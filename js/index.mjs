@@ -15,3 +15,10 @@ input.addEventListener("keyup", () => {
     output.value = encodeToMorse(message);
   }
 });
+
+// Copy output box to clipboard
+const button = document.getElementById("clipboard");
+
+button.addEventListener("click", () => {
+  navigator.clipboard.writeText(output.value);
+});
